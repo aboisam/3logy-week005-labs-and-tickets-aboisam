@@ -1,16 +1,117 @@
-# React + Vite
+# React Profile Page — Ticket-17
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal profile page built with React and Vite, showcasing reusable components and props-driven data flow.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Getting Started
 
-## React Compiler
+**Install dependencies:**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+**Start the development server:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run dev
+```
+
+**Open in browser:**
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🗂️ File Structure
+
+```
+src/
+├── assets/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   └── Interest.jsx
+│   ├── image/
+│   │   └── profile.jpg
+│   └── styles/
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+
+---
+
+## 📦 Components
+
+### `Header`
+
+Displays the profile picture, name, and tagline at the top of the page.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `name` | string | Full name |
+| `tagline` | string | Short personal tagline |
+| `avatar` | image | Imported local image |
+
+---
+
+### `About`
+
+Shows a bio paragraph, location, and list of interests.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `bio` | string | Personal biography |
+| `location` | string | Current city and country |
+| `interests` | array | List of interest strings |
+
+---
+
+### `Skills`
+
+Renders a list of skills with visual progress bar indicators.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `skills` | array | Array of `{ name, percentage }` objects |
+
+---
+
+### `Interests`
+
+Displays hobbies as a grid of cards with icons and descriptions.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `hobbies` | array | Array of `{ title, icon, description }` objects |
+
+---
+
+## ✅ Requirements Met
+
+- [x] 4 separate components in their own files
+- [x] All data passed via props from `App.jsx`
+- [x] Props destructured in every component
+- [x] Local image imported and used as avatar
+- [x] Lists rendered with `.map()` and `key` prop
+- [x] No console errors or warnings
+- [x] CSS styling applied
+
+---
+
+## 📤 Submission
+
+```
+TICKET-17 Submission
+Name: Aboi Samson Aboi
+GitHub: [Repository URL]
+Screenshot: [Attach profile page screenshot]
+Components: ✅ Header ✅ About ✅ Skills ✅ Interests
+```
+
+---
